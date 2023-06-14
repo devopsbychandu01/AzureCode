@@ -1,0 +1,11 @@
+az -h ## This will show all the help.
+## "az group" command used to manage the azure resource group.
+az group -h
+
+az group create --name dev1 --location eastus
+
+az group create -n test1 -l centralindia
+
+az group create --name uat1 --location eastus
+
+az group create -n prod1 -l centralindia

@@ -1,0 +1,1 @@
+New-AzResourceGroupDeployment -ResourceGroupName dev -Name stoageaccountdeploy -TemplateFile .\template.json -TemplateParameterFile .\parameter.json

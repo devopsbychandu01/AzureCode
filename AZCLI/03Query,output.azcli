@@ -1,0 +1,23 @@
+az group list
+az group list -h
+az group list --query "[].name"
+az group list --query "[].{resourceGroupName:name}"
+az group list --query "[].{resourceGroupName:name,location:location}"
+
+## Filter
+az group list --query "[?location=='eastus']"
+az group list --query "[?location=='eastus'].name"
+az group list --query "[?location=='eastus'].{resourceGroupName:name,location:location}"
+
+## Outputting ##
+az group list -h
+az group list --output tsv
+az group list --output json
+az group list --output jsonc
+az group list -o table
+az group list -o yaml
+
+# Combine query and output
+az group list --query "[].{resourceGroupName:name,location:location}" -o table
+az group list --query "[?location=='eastus'].{resourceGroupName:name,location:location}" -o table
+az group list --query "[?location=='eastus'].{resourceGroupName:name,location:location}" -o jsonc

@@ -1,0 +1,4 @@
+$rg = "dev"
+az group create --name $rg --location eastus 
+az group deployment create --resource-group $rg --template-file .\Module\storage.bicep --mode Complete
+az group delete --resource-group $rg --yes

@@ -1,0 +1,38 @@
+$rg = "test"
+az group create --name $rg --location eastus
+az group deployment create --resource-group $rg --template-file .\main.bicep --mode Complete
+az group delete --resource-group $rg --yes
+
+
+$rg = "test"
+az group create --name $rg --location eastus 
+az group deployment create --resource-group $rg --template-file .\ParameterScript1.bicep --mode Complete
+az group delete --resource-group $rg --yes
+
+
+$rg = "test"
+az group create --name $rg --location eastus 
+az group deployment create --resource-group $rg --template-file .\ParameterScript2.bicep --mode Complete
+az group delete --resource-group $rg --yes
+
+$rg = "test"
+az group create --name $rg --location eastus 
+az group deployment create --resource-group $rg --template-file .\LoopsSyntax.bicep --mode Complete
+az group delete --resource-group $rg --yes
+
+
+$rg = "test"
+az group create --name $rg --location eastus 
+az group deployment create --resource-group $rg --template-file .\firstfunction.bicep --mode Complete
+az group delete --resource-group $rg --yes
+
+$rg = "test"
+az group create --name $rg --location eastus 
+az group deployment create --name storage --resource-group $rg --template-file .\Conditional.bicep --mode Complete
+az group delete --resource-group $rg --yes
+
+
+
+az aks get-upgrades --resource-group test --name devakscluater --output table
+
+az aks upgrade --resource-group test --name devakscluater --kubernetes-version 1.23.8

@@ -1,5 +1,0 @@
-az deployment group create \
-  --name mystoragecreation \
-  --resource-group test \
-  --template-file storage.json \
-  --parameters @storageParameter.json

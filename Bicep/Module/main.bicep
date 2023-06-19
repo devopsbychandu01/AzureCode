@@ -4,6 +4,3 @@ module storage 'module.bicep' = {
     storageAccountName: 'devopsbychandu4'
   }
 }
-module nsg 'nsg.bicep' = {
-  name: 'creatingnsg'
-}

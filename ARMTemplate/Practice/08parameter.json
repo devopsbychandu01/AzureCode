@@ -1,0 +1,25 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+            "value": "devopsbychandu8"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "skuName": {
+            "value": "Standard_LRS"
+        },
+        "kind": {
+            "value": "StorageV2"
+        },
+        "tags": {
+            "value": {
+                "owner": "chandu",
+                "devops": "cloudcomputingDevops",
+                "app": "cloudcomputing"
+            }
+        }
+    }
+}

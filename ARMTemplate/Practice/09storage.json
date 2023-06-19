@@ -1,0 +1,46 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 24,
+            "metadata": {
+                "description": "This is storage account name perameter"
+            }
+        },
+        "location": {
+            "type": "string",
+            "allowedValues": [
+                "eastus",
+                "centralindia"
+            ]
+        },
+        "skuName": {
+            "type": "string"
+        },
+        "kind": {
+            "type": "string"
+        },
+        "tags": {
+            "type": "object"
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2021-06-01",
+            "name": "[parameters('storageAccountName')]",
+            "location": "[parameters('location')]",
+            "sku": {
+                "name": "[parameters('skuName')]"
+            },
+            "kind": "[parameters('kind')]",
+            "tags": "[parameters('tags')]"
+        }
+    ],
+    "outputs": {}
+}

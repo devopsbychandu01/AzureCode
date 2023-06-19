@@ -1,1 +1,0 @@
-az group deployment create --name storage --resource-group dev --template-file .\storage.bicep --parameters @paramater.json

@@ -1,0 +1,92 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 24,
+            "metadata": {
+                "description": "This is storage account name perameter"
+            }
+        },
+        "location": {
+            "type": "string",
+            "allowedValues": [
+                "eastus",
+                "centralindia"
+            ]
+        },
+        "skuName": {
+            "type": "string"
+        },
+        "kind": {
+            "type": "string"
+        },
+        "tags": {
+            "type": "object"
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2021-06-01",
+            "name": "[parameters('storageAccountName')]",
+            "location": "[parameters('location')]",
+            "sku": {
+                "name": "[parameters('skuName')]"
+            },
+            "kind": "[parameters('kind')]",
+            "tags": "[parameters('tags')]"
+        },
+        {
+            "name": "devopsbychandu",
+            "type": "Microsoft.Sql/servers",
+            "apiVersion": "2014-04-01",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "sqlServer1"
+            },
+            "properties": {
+                "administratorLogin": "devops",
+                "administratorLoginPassword": "India@123456"
+            },
+            "resources": [
+                {
+                    "type": "firewallRules",
+                    "apiVersion": "2014-04-01",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Sql/servers', 'devopsbychandu')]"
+                    ],
+                    "location": "[resourceGroup().location]",
+                    "name": "AllIps",
+                    "properties": {
+                        "startIpAddress": "0.0.0.0",
+                        "endIpAddress": "255.255.255.255"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "devopsbychandu/dev",
+            "type": "Microsoft.Sql/servers/databases",
+            "apiVersion": "2014-04-01",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "sqlDatabase1"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', 'devopsbychandu')]"
+            ],
+            "properties": {
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "edition": "Basic",
+                "maxSizeBytes": "1073741824",
+                "requestedServiceObjectiveName": "Basic"
+            }
+        }
+    ],
+    "outputs": {}
+}

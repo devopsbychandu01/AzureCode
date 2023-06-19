@@ -1,0 +1,59 @@
+az deployment group create `
+  --name mystoragecreation `
+  --resource-group dev `
+  --template-file 01storage.json
+
+
+az deployment group create `
+--name mystoragecreation1 `
+--resource-group dev `
+--template-file 02storage.json
+
+
+az deployment group create `
+  --name mystoragecreation3 `
+  --resource-group dev `
+  --template-file 03storage.json
+
+
+  az deployment group create `
+  --name mystoragecreation4 `
+  --resource-group dev `
+  --template-file 04storage.json
+
+
+
+az deployment group create \
+  --name mystoragecreation5 \
+  --resource-group dev \
+  --template-file 05storage.json
+
+
+New-AzResourceGroupDeployment `
+  -ResourceGroupName dev `
+  -Name mystoragecreation7 `
+  -TemplateFile .\07storage.json
+
+
+New-AzResourceGroupDeployment `
+  -ResourceGroupName dev `
+  -Name mystoragecreation8 `
+  -TemplateFile .\08storage.json
+
+New-AzResourceGroupDeployment `
+  -ResourceGroupName dev `
+  -Name mystoragecreation8 `
+  -TemplateFile .\08storage.json `
+  -TemplateParameterFile .\08parameter.json
+
+az deployment group create \
+  --name mystoragecreation5 \
+  --resource-group dev \
+  --template-file 05storage.json \
+  --parameters @./09parameter.json
+
+New-AzResourceGroupDeployment `
+  -ResourceGroupName dev `
+  -Name mystoragecreation10 `
+  -TemplateFile .\10template.json `
+  -TemplateParameterFile .\10parameter.json

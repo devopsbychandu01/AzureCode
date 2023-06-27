@@ -1,0 +1,2 @@
+location = "eastus"
+rgname = "dev"

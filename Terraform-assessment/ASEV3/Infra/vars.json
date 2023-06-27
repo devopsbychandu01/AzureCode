@@ -1,0 +1,22 @@
+{
+    "location": "eastus",
+    "tags": {
+        "owner": "chandu",
+        "support": "Devops"
+    },
+    "ProjectName": "PRBOR",
+    "Environment": "DEV",
+    "VnetName": "devvnet",
+    "VnetCIDR": ["10.0.0.0/16"],
+    "SubneNetName": "devsubnet",
+    "SubnetCIDR": ["10.0.0.0/24"],
+    "ASEName": "azuswasev3prboriy",
+    "loadBalancer": "Web, Publishing",
+    "zone_redundant": "false",
+    "clustesetting1": "DisableTls1.0",
+    "clustesetting2": "1",
+    "clustesetting3": "InternalEncryption",
+    "clusterValue1": "true",
+    "clusterValue2": "FrontEndSSLCipherSuiteOrder",
+    "clusterValue3": "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+}

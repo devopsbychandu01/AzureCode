@@ -1,0 +1,3 @@
+terraform init
+terraform plan -var-file=".\dev.tfvars.json"
+terraform plan -var-file=".\dev.tfvars.json" -var="location=westus"  # we can overwrite the variables from the commandline

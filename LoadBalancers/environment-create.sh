@@ -1,7 +1,7 @@
-group=test
+group=dev
 az group create -g $group -l centralindia
-username=adminuser
-password='SecretPassword123!@#'
+username=devops
+password='India@123456'
 
 az network vnet create \
   -n vm-vnet \

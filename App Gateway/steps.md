@@ -17,6 +17,8 @@ cp server.key server.key.org
 openssl rsa -in server.key.org -out server.key
 rm -f server.key.org
 openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+openssl pkcs12 -export -out server.pfx -inkey server.key -in server.crt
+openssl x509 -inform PEM -in server.crt -outform DER -out server.cer
 
 ### update the certs into apache2 ###
 vi /etc/apache2/sites-available/default-ssl.conf

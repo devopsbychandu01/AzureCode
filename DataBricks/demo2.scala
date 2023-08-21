@@ -35,13 +35,13 @@ renamedColumnsDF.createOrReplaceTempView("renamed")
 
 // COMMAND ----------
 
-// MAGIC %sql
-// MAGIC SELECT 
-// MAGIC    count(*) as count,
-// MAGIC    subscription_type
-// MAGIC FROM renamed
-// MAGIC GROUP BY 
-// MAGIC    subscription_type
+%sql
+SELECT 
+   count(*) as count,
+   subscription_type
+FROM renamed
+GROUP BY 
+   subscription_type
 
 // COMMAND ----------
 

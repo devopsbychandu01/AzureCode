@@ -1,5 +1,9 @@
 az storage account create --name devabcddevops23 --resource-group dev --location eastus --access-tier hot
 
+
+
+az storage account create --name devabcddevops24 --resource-group dev --location eastus --access-tier hot --sku Standard_GRS
+
 az storage account create `
     --name devabcddevops24 `
     --resource-group dev `
@@ -7,9 +11,9 @@ az storage account create `
     --access-tier hot `
     --sku Standard_GRS
 
-az storage account delete `
-    --name devabcddevops23 `
-    --resource-group dev `
+az storage account delete \
+    --name devabcddevops23 \
+    --resource-group dev \
     --yes
 
 

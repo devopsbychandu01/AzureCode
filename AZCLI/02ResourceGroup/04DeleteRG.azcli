@@ -2,10 +2,8 @@
 az group delete --name dev1
 
 #providing our confirmation on the commandline
-az group delete --name dev1 --yes
+az group delete --name NetworkWatcherRG --yes
 
 # --no-wait will do the command execution on the backend.
 az group delete --name uat1 --yes --no-wait
 az group delete --name prod1 --yes --no-wait
-
-az group delete --name test1 --yes --no-wait

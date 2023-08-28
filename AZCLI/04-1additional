@@ -1,3 +1,0 @@
-az group exists --name test2
-
-az group lock create --lock-type CanNotDelete --name demo -g test1

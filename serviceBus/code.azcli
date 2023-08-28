@@ -1,5 +1,0 @@
-## reference code
-# https://github.com/rochabr/reactor-ais/tree/main/02-servicebus #
-
-python3 sender.python3
-python3 receiver.py

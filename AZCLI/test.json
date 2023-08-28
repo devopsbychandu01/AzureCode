@@ -1,0 +1,46 @@
+[
+  {
+    "id": "/subscriptions/a7ee7b4a-8947-41aa-b828-6cc170624574/resourceGroups/dev",
+    "location": "eastus",
+    "managedBy": null,
+    "name": "dev",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": null,
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/a7ee7b4a-8947-41aa-b828-6cc170624574/resourceGroups/NetworkWatcherRG",
+    "location": "eastus",
+    "managedBy": null,
+    "name": "NetworkWatcherRG",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": null,
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/a7ee7b4a-8947-41aa-b828-6cc170624574/resourceGroups/dev1",
+    "location": "eastus",
+    "managedBy": null,
+    "name": "dev1",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": null,
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/a7ee7b4a-8947-41aa-b828-6cc170624574/resourceGroups/uat1",
+    "location": "eastus",
+    "managedBy": null,
+    "name": "uat1",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": null,
+    "type": "Microsoft.Resources/resourceGroups"
+  }
+]

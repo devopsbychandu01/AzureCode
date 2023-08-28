@@ -1,4 +1,4 @@
 
-az interative
+az interactive
 
 az vm create --name myvm --resource-group test --image UbuntuLTS --generate-ssh-keys --admin-username amdemoadmin

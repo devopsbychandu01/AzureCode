@@ -1,16 +1,22 @@
 ##UserLogin
 az login
 az logout
+az account show
 
 az login --use-device-code
+az account show
 az logout
+az account show
 
 az login -u chandrasekhar@devopsbychandu3.onmicrosoft.com
 az logout
 
 ## service principle
-az login --service-principal -u cb424207-f45f-445e-8a7f-89b5c8c04093 -p QfO8Q~0PwPlqrqR-p.ss0hiugxNg2BC8c4h_ZcVx --tenant b1f0c119-8d8d-4dcd-aff5-ce30199f40ad
+az login --service-principal -u a9ff22d9-a619-422f-9b04-f92737872a18 -p bIu8Q~LcC-fs.UbBTA2w2gBuSqJ21djVMNEYdcsD --tenant b1f0c119-8d8d-4dcd-aff5-ce30199f40ad
+az account show
 az logout
+
+
 
 ## Managed Identity
 az login --identity

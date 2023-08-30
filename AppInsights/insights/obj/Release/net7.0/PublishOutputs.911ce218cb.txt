@@ -1,0 +1,7 @@
+C:\CloudComputing\AllOtherCode\june batch\insights\bin\Release\net7.0\publish\insights.exe
+C:\CloudComputing\AllOtherCode\june batch\insights\bin\Release\net7.0\publish\appsettings.Development.json
+C:\CloudComputing\AllOtherCode\june batch\insights\bin\Release\net7.0\publish\appsettings.json
+C:\CloudComputing\AllOtherCode\june batch\insights\bin\Release\net7.0\publish\insights.dll
+C:\CloudComputing\AllOtherCode\june batch\insights\bin\Release\net7.0\publish\insights.deps.json
+C:\CloudComputing\AllOtherCode\june batch\insights\bin\Release\net7.0\publish\insights.runtimeconfig.json
+C:\CloudComputing\AllOtherCode\june batch\insights\bin\Release\net7.0\publish\insights.pdb

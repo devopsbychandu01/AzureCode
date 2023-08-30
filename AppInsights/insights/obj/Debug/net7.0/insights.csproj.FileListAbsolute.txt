@@ -1,0 +1,2 @@
+C:\CloudComputing\AllOtherCode\june batch\insights\bin\Debug\net7.0\insights.exe
+C:\CloudComputing\AllOtherCode\june batch\insights\bin\Debug\net7.0\insights.dll

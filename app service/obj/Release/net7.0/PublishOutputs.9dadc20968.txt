@@ -1,0 +1,7 @@
+C:\CloudComputing\AllOtherCode\june batch\appservice\bin\Release\net7.0\publish\appservice.exe
+C:\CloudComputing\AllOtherCode\june batch\appservice\bin\Release\net7.0\publish\appsettings.Development.json
+C:\CloudComputing\AllOtherCode\june batch\appservice\bin\Release\net7.0\publish\appsettings.json
+C:\CloudComputing\AllOtherCode\june batch\appservice\bin\Release\net7.0\publish\appservice.dll
+C:\CloudComputing\AllOtherCode\june batch\appservice\bin\Release\net7.0\publish\appservice.deps.json
+C:\CloudComputing\AllOtherCode\june batch\appservice\bin\Release\net7.0\publish\appservice.runtimeconfig.json
+C:\CloudComputing\AllOtherCode\june batch\appservice\bin\Release\net7.0\publish\appservice.pdb

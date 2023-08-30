@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = _02_ReceiveEvents
+build_property.ProjectDir = c:\CloudComputing\Code\AzureCode\EventHub\02-ReceiveEvents\

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = _01_SendEvents
+build_property.ProjectDir = c:\CloudComputing\Code\AzureCode\EventHub\01-SendEvents\

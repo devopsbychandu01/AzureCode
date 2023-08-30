@@ -1,0 +1,9 @@
+. .\04function.ps1
+
+Helloworld
+
+Helloworld chandra sekhar
+
+Helloworld -firstname chandra -lastname sekhar
+
+Helloworld -lastname sekhar -firstname chandra

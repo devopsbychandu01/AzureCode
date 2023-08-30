@@ -1,0 +1,18 @@
+Get-Variable #(env variable and custom variable)
+
+##if you kill the session, the session will not give the custome variable##
+
+$PSVersionTable.PSVersion 
+
+
+## error env variable is an array. all the errors on that particular session will be shown in the terminal##
+$Error
+
+slkdfjsdpfi
+;fkdsjfoisndv
+$Error
+
+$HOME
+
+
+$PROFILE

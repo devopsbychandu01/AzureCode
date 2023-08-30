@@ -1,0 +1,19 @@
+$PSVersionTable.PSVersion
+
+# Update PowerShellGet if you have windows 5.1 is in place
+Install-Module -Name PowerShellGet -Force
+
+# Get all execution policies.
+Get-ExecutionPolicy -List
+
+# Set the PowerShell execution policy to remote signed
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# install az modules
+Install-Module -Name Az -Repository PSGallery -Force
+
+# update az modules
+Update-Module -Name Az -Force
+
+# enable azure rm alias
+Enable-AzureRmAlias

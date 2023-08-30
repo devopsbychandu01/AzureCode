@@ -1,0 +1,1 @@
+Get-ChildItem -Path 'C:\Program Files (x86)' -Recurse | Where-Object {$_.Extension -eq ".exe"}

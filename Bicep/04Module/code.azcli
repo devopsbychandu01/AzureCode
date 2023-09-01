@@ -1,0 +1,1 @@
+az group deployment create --resource-group $rg --template-file .\04Module\03main.bicep

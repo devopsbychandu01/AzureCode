@@ -1,1 +1,0 @@
-az deployment group create --name storageaccountcreation --resource-group test --template-file script.bicep

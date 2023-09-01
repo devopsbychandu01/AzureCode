@@ -1,3 +1,5 @@
+@maxLength(24)
+@minLength(3)
 param storageAccountName string
 
 resource storageaccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
@@ -5,9 +7,11 @@ resource storageaccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
   location: 'eastus'
   kind: 'StorageV2'
   sku: {
-    name: 'Standard_LRS'
+    name: 'Premium_LRS'
   }
   properties: {
-    accessTier: 'Cool'
+    accessTier: 'Hot'
   }
 }
+
+output storageEndPoint object = storageaccount.properties.primaryEndpoints

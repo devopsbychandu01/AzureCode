@@ -7,10 +7,10 @@ resource resourcegroupname 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 }
 
 
-module storageModule 'module.bicep' ={
+module storageModule '01storage.bicep' ={
   name: 'storagModule'
   scope: resourceGroup(resourcegroupname.name)
   params: {
-    storageAccountName: 'devopsbychandu6'
+    storageAccountName: 'devopsbychandu20'
   }
 }

@@ -1,2 +1,0 @@
-az deployment sub create --name a7ee7b4a-8947-41aa-b828-6cc170624574 --template-file .\Module\storage.bicep
-az group delete --resource-group $rg --yes

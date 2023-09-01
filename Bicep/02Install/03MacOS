@@ -1,0 +1,21 @@
+## az bicep
+az --version  ## if your version is more than 2.20 then you are eligible for az bicep
+az bicep version
+
+## If your az version is less than 2.20 then use the following command to upgrade it.
+az upgrade
+az bicep version
+
+##  If you want to upgrade the az bicep then use the following command.
+az bicep upgrade
+
+
+## ------------------------------------ ###
+
+## install bicep in macos
+
+# Add the tap for bicep
+brew tap azure/bicep
+
+# Install the tool
+brew install bicep

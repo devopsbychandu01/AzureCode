@@ -1,0 +1,13 @@
+$rg = "dev"
+az group create --name $rg --location eastus
+az group deployment create --resource-group $rg --template-file .\01Storage.bicep --mode Incremental
+
+az group deployment create --name mystorageAccount --resource-group $rg --template-file .\02StorageWithVar.bicep --mode Incremental
+
+az group deployment create --resource-group $rg --template-file .\03storageConcFunction.bicep --mode Incremental
+
+az group deployment create --resource-group $rg --template-file .\04Array(firstfunction).bicep --mode Incremental
+
+az group deployment create --resource-group $rg --template-file .\05Conditional.bicep --mode Incremental
+
+az group deployment create --resource-group $rg --template-file .\06LoopsSyntax.bicep --mode Incremental

@@ -1,0 +1,40 @@
+## az bicep
+az --version  ## if your version is more than 2.20 then you are eligible for az bicep
+az bicep version
+
+## If your az version is less than 2.20 then use the following command to upgrade it.
+az upgrade
+az bicep version
+
+##  If you want to upgrade the az bicep then use the following command.
+az bicep upgrade
+
+## If you have powershell terminal, ever your az version is higher you will not get the az bicep by default. To get az bicep use the following command.
+az bicep install
+az bicep version
+
+## --------------------------------------------- ##
+###  bicep  ###
+# if you not using az cli, but you are using azure powershell then use the following command to install bicep in your laptop
+
+# If you have choco package manager installed then use the following command.
+choco install bicep
+
+# If you have Winget package manager installed then use the following command
+winget install -e --id Microsoft.Bicep
+
+###### install manually using PowerShell  ######
+
+# Create the install folder
+$installPath = "$env:USERPROFILE\.bicep"
+$installDir = New-Item -ItemType Directory -Path $installPath -Force
+$installDir.Attributes += 'Hidden'
+# Fetch the latest Bicep CLI binary
+(New-Object Net.WebClient).DownloadFile("https://github.com/Azure/bicep/releases/latest/download/bicep-win-x64.exe", "$installPath\bicep.exe")
+# Add bicep to your PATH
+$currentPath = (Get-Item -path "HKCU:\Environment" ).GetValue('Path', '', 'DoNotExpandEnvironmentNames')
+if (-not $currentPath.Contains("%USERPROFILE%\.bicep")) { setx PATH ($currentPath + ";%USERPROFILE%\.bicep") }
+if (-not $env:path.Contains($installPath)) { $env:path += ";$installPath" }
+# Verify you can now access the 'bicep' command.
+bicep --help
+# Done!

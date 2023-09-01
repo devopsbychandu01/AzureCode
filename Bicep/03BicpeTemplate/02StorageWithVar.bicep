@@ -1,4 +1,4 @@
-var storageaccountName = 'dev2022newi1'
+var storageaccountName = 'devopsbychandu2'
 
 resource devStorageAccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
   name: storageaccountName

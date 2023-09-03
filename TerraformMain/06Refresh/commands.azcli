@@ -1,0 +1,11 @@
+terraform init
+terraform plan
+terraform plan -var-file=".\vars\dev.tfvars.json"
+terraform apply -var-file=".\vars\dev.tfvars.json" --auto-approve
+
+terraform plan -var-file=".\vars\dev.tfvars.json" -out tf.out
+
+terraform plan -var-file=".\vars\dev.tfvars.json" -out tf.out
+terraform apply tf.out
+
+terraform refresh

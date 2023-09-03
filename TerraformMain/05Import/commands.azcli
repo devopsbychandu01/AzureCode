@@ -1,0 +1,13 @@
+terraform init
+terraform plan
+terraform plan -var-file=".\vars\dev.tfvars.json"
+terraform apply -var-file=".\vars\dev.tfvars.json" --auto-approve
+
+terraform plan -var-file=".\vars\dev.tfvars.json" -out tf.out
+
+terraform plan -var-file=".\vars\dev.tfvars.json" -out tf.out
+terraform apply tf.out
+
+terraform import azurerm_resource_group.myresourceGroup <resoruceID>
+terraform import azurerm_storage_account.storageAccount <resoruceID>
+terraform import azurerm_public_ip.publicIP <resoruceID>

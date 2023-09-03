@@ -1,0 +1,5 @@
+AccountKind = "Standard"
+location = "East US"
+replicationType = "LRS"
+RGName = "test"
+storageAccountName = "devopsbychandu908i1"

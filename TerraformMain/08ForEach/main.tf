@@ -1,6 +1,21 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">=3.0.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+}
+
+
+
 variable "storage_account_names" {
   type    = list(string)
-  default = ["jackuksstr001", "jackuksstr002", "jackuksstr003"]
+  default = ["devopsbychandustg01", "devopsbychandustg02", "devopsbychandustg03"]
 }
 
 resource "azurerm_resource_group" "example" {

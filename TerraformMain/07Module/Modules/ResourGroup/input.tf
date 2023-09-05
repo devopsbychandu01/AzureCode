@@ -4,6 +4,3 @@ variable "nameofRG" {
 variable "location" {
   type = string
 }
-variable "tags" {
-  
-}

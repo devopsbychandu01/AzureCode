@@ -8,6 +8,6 @@ terraform plan -var-file=".\vars\dev.tfvars.json" -out tf.out
 terraform plan -var-file=".\vars\dev.tfvars.json" -out tf.out
 terraform apply tf.out
 
-terraform import azurerm_resource_group.myresourceGroup <resoruceID>
-terraform import azurerm_storage_account.storageAccount <resoruceID>
-terraform import azurerm_public_ip.publicIP <resoruceID>
+terraform import azurerm_resource_group.myresourceGroup /subscriptions/a7ee7b4a-8947-41aa-b828-6cc170624574/resourceGroups/test
+terraform import azurerm_storage_account.storageAccount /subscriptions/a7ee7b4a-8947-41aa-b828-6cc170624574/resourceGroups/test/providers/Microsoft.Storage/storageAccounts/devopsbychandu908i1
+terraform import azurerm_public_ip.publicIP /subscriptions/a7ee7b4a-8947-41aa-b828-6cc170624574/resourceGroups/dev/providers/Microsoft.Network/publicIPAddresses/devpublicIP

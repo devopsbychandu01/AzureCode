@@ -10,7 +10,7 @@ az network vnet create \
   --address-prefixes '10.0.0.0/16' \
   --subnet-name subnet \
   --subnet-prefixes '10.0.0.0/24'
-  
+ 
 az vm availability-set create \
   -n vm-as \
   -l centralindia \
@@ -48,6 +48,3 @@ do
     --version 1.8 \
     --settings '{"commandToExecute":"powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path \"C:\\inetpub\\wwwroot\\Default.htm\" -Value $($env:computername)"}'
 done
-
-
-

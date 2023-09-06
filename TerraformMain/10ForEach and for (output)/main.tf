@@ -11,8 +11,6 @@ provider "azurerm" {
   features {}
 }
 
-
-
 variable "storage_account_names" {
   type    = list(string)
   default = ["devopsbychandustg01", "devopsbychandustg02", "devopsbychandustg03"]
@@ -30,4 +28,10 @@ resource "azurerm_storage_account" "my_storage" {
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
+}
+
+output "storage_account_names" {
+  value = [
+    for storage in azurerm_storage_account.my_storage: storage.id
+  ]
 }

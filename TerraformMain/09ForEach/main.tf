@@ -1,11 +1,26 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">=3.0.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+}
+
+
+
 variable "storage_account_names" {
   type    = list(string)
   default = ["devopsbychandustg01", "devopsbychandustg02", "devopsbychandustg03"]
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "storage-rg"
-  location = "UK South"
+  name     = "test"
+  location = "eastus"
 }
 
 resource "azurerm_storage_account" "my_storage" {
@@ -15,11 +30,4 @@ resource "azurerm_storage_account" "my_storage" {
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
-}
-
-output "storage_account_names" {
-  value = [
-    for storage in var.storage_account_names:
-    azurerm_storage_account.my_storage.example[storage].id
-  ]
 }

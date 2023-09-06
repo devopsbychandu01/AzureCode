@@ -1,7 +1,6 @@
 variable "prefix" {
   type = string
   default = "learning"
-
 }
 variable "rgname" {
   type = string
@@ -27,4 +26,8 @@ variable "account_tier" {
 variable "account_replication_type" {
   type = string
   default = "LRS"
+}
+variable "storagAccountName" {
+  type = string
+  default = "devopsbychandu02"
 }

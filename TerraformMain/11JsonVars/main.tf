@@ -1,6 +1,7 @@
 resource "azurerm_resource_group" "myresourceGroup" {
   name = var.RGName
   location = var.location
+  tags = var.tags
 }
 
 resource "azurerm_storage_account" "storageAccount" {

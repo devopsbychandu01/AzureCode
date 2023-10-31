@@ -11,14 +11,15 @@ vi /var/www/html/app1/index.html
 
 
 ### creating the certificates ###
-openssl genrsa -des3 -out server.key 2048
-openssl req -new -key server.key -out server.csr
-cp server.key server.key.org
-openssl rsa -in server.key.org -out server.key
-rm -f server.key.org
-openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
-openssl pkcs12 -export -out server.pfx -inkey server.key -in server.crt
-openssl x509 -inform PEM -in server.crt -outform DER -out server.cer
+openssl genrsa -des3 -out app1.key 2048
+openssl req -new -key app1.key -out app1.csr
+cp app1.key app1.key.org
+openssl rsa -in app1.key.org -out app1.key
+rm -f app1.key.org
+openssl x509 -req -days 365 -in app1.csr -signkey app1.key -out app1.crt
+openssl pkcs12 -export -out app1.pfx -inkey app1.key -in app1.crt
+chmod 777 *
+openssl x509 -inform PEM -in app1.crt -outform DER -out app1.cer
 
 ### update the certs into apache2 ###
 vi /etc/apache2/sites-available/default-ssl.conf

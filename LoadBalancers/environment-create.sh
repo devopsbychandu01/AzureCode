@@ -1,15 +1,15 @@
-group=dev
+group=test
 az group create -g $group -l centralindia
 username=devops
 password='India@123456'
 
 az network vnet create \
-  -n vm-vnet \
+  -n vmvnet \
   -g $group \
   -l centralindia \
-  --address-prefixes '10.0.0.0/16' \
+  --address-prefixes '10.1.0.0/16' \
   --subnet-name subnet \
-  --subnet-prefixes '10.0.0.0/24'
+  --subnet-prefixes '10.1.0.0/24'
  
 az vm availability-set create \
   -n vm-as \
@@ -19,7 +19,7 @@ az vm availability-set create \
 for NUM in 1 2
 do
   az vm create \
-    -n vm-eu-0$NUM \
+    -n vm-eu-01$NUM \
     -g $group \
     -l centralindia \
     --size Standard_B1s \
@@ -35,14 +35,14 @@ done
 
 for NUM in 1 2
 do
-  az vm open-port -g $group --name vm-eu-0$NUM --port 80
+  az vm open-port -g $group --name vm-eu-01$NUM --port 80
 done
 
 for NUM in 1 2
 do
   az vm extension set \
     --name CustomScriptExtension \
-    --vm-name vm-eu-0$NUM \
+    --vm-name vm-eu-01$NUM \
     -g $group \
     --publisher Microsoft.Compute \
     --version 1.8 \

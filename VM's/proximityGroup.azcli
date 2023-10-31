@@ -1,0 +1,8 @@
+# Receiver
+# Allow Latte through the Firewall 
+netsh advfirewall firewall add rule program=c:\Tools\latte.exe name="Latte" protocol=any dir=in action=allow enable=yes profile=ANY
+# Start Receiver
+C:\tools\latte.exe -a 10.0.0.4:5005 -i 651000
+
+# Sender
+C:\Tools\latte.exe -c -a 10.0.0.4:5005 -i 651000

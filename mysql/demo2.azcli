@@ -1,0 +1,25 @@
+## Use the link https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04 and install
+
+mysql -u root -p
+show databases;
+use mysql;
+show tables;
+create database icici;
+show databases;
+use icici;
+show tables;
+drop database icici;
+show databases;
+Creating Mysql user:
+CREATE USER 'username'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+CREATE USER ‘varun'@'%' IDENTIFIED BY ‘varun';
+GRANT ALL PRIVILEGES ON *.* TO 'vasanth'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+Select user from mysql.user;
+dump:
+mysqldump -u root -p sys > /home/devops/sys.sql;
+mysqldump -u root -p icici < /home/devops/sys.sql
+restore:
+mysql -u vijju -p icici < /home/ubuntu/backup/icici.sql

@@ -1,0 +1,16 @@
+create database db1;
+use db1;
+show databases;
+CREATE TABLE customers
+(id int(10),
+ name varchar(50),
+ city varchar(50),
+ PRIMARY KEY (id)
+);
+ALTER TABLE customers
+ADD age varchar(50);
+insert into customers values (101, 'chand', 'hyd’);
+insert into customers values (101, 'chand', 'hyd’, ‘50');
+delete from customers where id=101;
+SELECT * FROM  customers;
+drop table customers;

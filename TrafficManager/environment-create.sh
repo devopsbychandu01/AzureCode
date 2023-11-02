@@ -12,25 +12,25 @@ az vm create \
   --nsg-rule rdp
   
 az vm create \
-  -n vm-eastus2 \
+  -n vm-eastus \
   -g $group \
-  -l eastus2 \
+  -l eastus \
   --image Win2019Datacenter \
   --admin-username $username \
   --admin-password $password \
   --nsg-rule rdp
 
 az appservice plan create \
-  -n web-eastus2-plan \
+  -n web-eastus-plan \
   -g $group \
-  -l eastus2 \
+  -l eastus \
   --sku S1
   
-appname=demo-web-eastus2-$RANDOM$RANDOM
+appname=demo-web-eastus-$RANDOM$RANDOM
 az webapp create \
   -n $appname \
   -g $group \
-  -p web-eastus2-plan
+  -p web-eastus-plan
   
 az appservice plan create \
   -n web-centralindia-plan \

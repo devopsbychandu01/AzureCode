@@ -5,5 +5,9 @@ CREATE TABLE Persons (
 )
 Query
 INSERT INTO Persons (FirstName, LastName, Age)
-VALUES (Chandra',‘sekhar',29);
+VALUES ('Chandra','sekhar',29);
+
+INSERT INTO Persons (FirstName, LastName, Age)
+VALUES ('mahesh','kumar');
+
 SELECT * FROM Persons;

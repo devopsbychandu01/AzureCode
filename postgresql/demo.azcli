@@ -1,0 +1,13 @@
+\l
+\l+
+SELECT datname FROM pg_database;
+CREATE DATABASE sales;
+https://www.postgresqltutorial.com/postgresql-administration/postgresql-create-database/
+ALTER DATABASE sales
+RENAME TO new_name; 
+Role:
+CREATE ROLE role_name;
+https://www.postgresqltutorial.com/postgresql-administration/postgresql-roles/
+Schema:
+CREATE SCHEMA marketing;
+https://www.postgresqltutorial.com/postgresql-administration/postgresql-create-schema/

@@ -9,8 +9,8 @@ CREATE TABLE customers
 );
 ALTER TABLE customers
 ADD age varchar(50);
-insert into customers values (101, 'chand', 'hyd’);
-insert into customers values (101, 'chand', 'hyd’, ‘50');
+insert into customers values (101, 'chand', 'hyd');
+insert into customers values (101, 'chand', 'hyd', '50');
 delete from customers where id=101;
 SELECT * FROM  customers;
 drop table customers;

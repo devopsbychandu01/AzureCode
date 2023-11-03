@@ -1,3 +1,0 @@
-dotnet new console
-dotnet add package Microsoft.Azure.Cosmos
-dotnet restore

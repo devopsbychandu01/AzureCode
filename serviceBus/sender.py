@@ -4,8 +4,8 @@ from azure.servicebus import ServiceBusClient, ServiceBusMessage
 # CONNECTION_STR = os.environ["SERVICEBUS_CONN_STR"]
 # QUEUE_NAME = os.environ["QUEUE_NAME"]
 
-CONNECTION_STR = "Endpoint=sb://devospbychandu.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=dbeuIpipnOM7bPdOXcOt2DdepqRzG/uCz+ASbAYCb9Q="
-QUEUE_NAME = "cloudcomputingqueue"
+CONNECTION_STR = "Endpoint=sb://devopsbychandu.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=V7aBTjbwmYwnc7nDF9E66PA1fWoq+ohfI+ASbDUj2kI="
+QUEUE_NAME = "demo"
 
 
 def send_single_message(sender):

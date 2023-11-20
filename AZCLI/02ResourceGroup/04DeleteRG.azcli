@@ -1,4 +1,6 @@
 ##This will ask the confirmation.
+az group delete --name test1
+
 az group delete --name dev1
 
 #providing our confirmation on the commandline

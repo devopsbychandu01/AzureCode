@@ -1,6 +1,6 @@
 $emailregex = "[a-z0-9!#\$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#\$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
 
-$youremail = "clfksdjpoin@gmail.com"
+$youremail = "abcd@gmail.com"
 
 if ($youremail -match $emailregex)
 {

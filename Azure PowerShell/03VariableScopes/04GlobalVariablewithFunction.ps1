@@ -1,5 +1,5 @@
 function Get-function {
-    $Global:MyVar = Get-Process PowerShell
+    $MyVar = Get-Process PowerShell
     Write-Host
     Write-Host "Function Output:"
     $MyVar

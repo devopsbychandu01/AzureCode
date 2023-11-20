@@ -12,7 +12,7 @@ az login -u chandrasekhar@devopsbychandu3.onmicrosoft.com
 az logout
 
 ## service principle
-az login --service-principal -u a9ff22d9-a619-422f-9b04-f92737872a18 -p bIu8Q~LcC-fs.UbBTA2w2gBuSqJ21djVMNEYdcsD --tenant sakoksdllsvoifnildno
+az login --service-principal -u a57fbb90-d668-4faa-ba91-c7e62e496970 -p zit8Q~4T4DWTqKXBftmBUREradAbzElzF2Myhdde --tenant b1f0c119-8d8d-4dcd-aff5-ce30199f40ad
 az account show
 az logout
 

@@ -4,5 +4,8 @@ $var2 = 4
 
 # refer pdf 6th page
 $var1 -ne $var2
+$var1 -eq $var2
+$var1 -le $var2
+$var1 -lt $var2
 
 ## eq, le, lt, gt, ge, ne

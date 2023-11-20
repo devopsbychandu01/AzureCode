@@ -9,3 +9,5 @@ az group create -n test1 -l centralindia
 az group create --name uat1 --location eastus
 
 az group create -n prod1 -l centralindia
+
+az group create --name dev --location "East US"

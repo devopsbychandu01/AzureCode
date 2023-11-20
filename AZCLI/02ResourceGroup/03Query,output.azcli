@@ -21,3 +21,5 @@ az group list -o yaml
 az group list --query "[].{resourceGroupName:name,location:location}" -o table
 az group list --query "[?location=='eastus'].{resourceGroupName:name,location:location}" -o table
 az group list --query "[?location=='eastus'].{resourceGroupName:name,location:location}" -o jsonc
+
+az group list --query "[?location=='eastus'].{resourceGroupName:name,location:location}" -o jsonc > output.json

@@ -11,4 +11,4 @@ param($a,$b)
     write-host "value is $c"
 }
 
-myfunc01 -a 7 -b 5 
+myfunc01 -a 7 -b 2

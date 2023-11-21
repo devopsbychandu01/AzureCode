@@ -1,6 +1,6 @@
 $resourceGroup="dev"
 $location="eastus"
-$stoageaccountname="devospbychandu679"
+$stoageaccountname="devopsbychandu0989"
 
 Remove-AzStorageAccount -Name $stoageaccountname `
 -ResourceGroupName $resourceGroup `

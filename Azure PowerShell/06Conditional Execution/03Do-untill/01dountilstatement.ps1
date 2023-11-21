@@ -1,4 +1,5 @@
 ##script block executes until the condition is true##
+## Or script execute if the condition is false ##
 
 $x=1
 

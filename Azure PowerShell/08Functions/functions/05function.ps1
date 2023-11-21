@@ -31,4 +31,4 @@ Function myfunc01
     write-host "sum is $c"
 }
 
-myfunc01 -Param1 4 -Param2 3
+myfunc01 -Param1 5 -Param2 5

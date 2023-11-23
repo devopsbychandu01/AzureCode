@@ -1,0 +1,15 @@
+az deployment group create `
+    --name firstdemo `
+    --resource-group dev `
+    --template-file 01storage.json
+
+az deployment group create \
+    --name firstdemo \
+    --resource-group dev \
+    --template-file 01storage.json
+
+New-AzResourceGroupDeployment `
+  -ResourceGroupName dev `
+  -Name devopsbychandu02 `
+  -TemplateFile 01storage.json `
+  -TemplateParameterFile 01parameter.json

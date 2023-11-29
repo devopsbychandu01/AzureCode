@@ -1,4 +1,4 @@
-var storageaccountName = 'dev2023newi1'
+var storageaccountName = 'devopsbychandu34'
 
 var regions = [
   'eastus'

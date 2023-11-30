@@ -1,0 +1,3 @@
+terraform import azurerm_resource_group.testingGroup /subscriptions/a7ee7b4a-8947-41aa-b828-6cc170624574/resourceGroups/testing
+
+terraform import azurerm_resource_group.prodGroup /subscriptions/a7ee7b4a-8947-41aa-b828-6cc170624574/resourceGroups/prod

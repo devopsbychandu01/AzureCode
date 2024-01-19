@@ -1,4 +1,8 @@
-## Use the link https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04 and install
+## Use the link https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04 and install
+sudo apt update
+sudo apt install mysql-server
+sudo systemctl start mysql.service
+
 
 mysql -u root -p
 show databases;
@@ -25,6 +29,5 @@ mysql -u varun -p
 Select user from mysql.user;
 dump:
 mysqldump -u root -p sys > /home/devops/sys.sql;
-mysqldump -u root -p icici < /home/devops/sys.sql
 restore:
 mysql -u root -p sys < /home/devops/sys.sql

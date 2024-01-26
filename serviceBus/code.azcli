@@ -3,3 +3,7 @@
 
 python3 sender.py
 python3 receiver.py
+
+
+apt-get install python3 -y
+yum install python3 -y

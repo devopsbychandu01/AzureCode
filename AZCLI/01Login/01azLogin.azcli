@@ -30,3 +30,5 @@ az logout
 
 az account set -s subscription1
 az account show
+
+az login --service-principal -u 9f774f16-e5cf-46ee-b7d5-1cb15be05b27 -p JNp8Q~zNOmioRyxmttRqMfGGtwHu5~~WKUytqaKg --tenant b1f0c119-8d8d-4dcd-aff5-ce30199f40ad

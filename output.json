@@ -1,0 +1,18 @@
+[
+  {
+    "location": "eastus",
+    "resourceGroupName": "dev"
+  },
+  {
+    "location": "eastus",
+    "resourceGroupName": "NetworkWatcherRG"
+  },
+  {
+    "location": "eastus",
+    "resourceGroupName": "dev1"
+  },
+  {
+    "location": "eastus",
+    "resourceGroupName": "uat1"
+  }
+]

@@ -12,7 +12,7 @@ az login -u chandrasekhar@devopsbychandu3.onmicrosoft.com
 az logout
 
 ## service principle
-az login --service-principal -u a57fbb90-d668-4faa-ba91-c7e62e496970 -p zit8Q~4T4DWTqKXBftmBUREradAbzElzF2Myhdde --tenant b1f0c119-8d8d-4dcd-aff5-ce30199f40ad
+az login --service-principal -u 5d9baf82-dc71-42e0-8b0e-bb961da7a27f -p wHf8Q~gs4CVtHzMzuMRFtrlrfUHCAlJR-VeKlapV --tenant b1f0c119-8d8d-4dcd-aff5-ce30199f40ad
 az account show
 az logout
 
@@ -28,7 +28,5 @@ az logout
 
 # account set.
 
-az account set -s subscription1
+az account set -s pay-as-you-go
 az account show
-
-az login --service-principal -u 9f774f16-e5cf-46ee-b7d5-1cb15be05b27 -p JNp8Q~zNOmioRyxmttRqMfGGtwHu5~~WKUytqaKg --tenant b1f0c119-8d8d-4dcd-aff5-ce30199f40ad

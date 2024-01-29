@@ -1,1 +1,6 @@
-az network vnet create -g dev -n MyVnet --address-prefix 10.1.0.0/16 --subnet-name MySubnet --subnet-prefixes 10.1.0.0/24`
+az network vnet create `
+    -g dev `
+    -n MyVnet `
+    --address-prefix 10.1.0.0/16 `
+    --subnet-name MySubnet `
+    --subnet-prefixes 10.1.0.0/24`

@@ -4,6 +4,8 @@ Get-Variable #(env variable and custom variable)
 
 $PSVersionTable.PSVersion 
 
+# All Env variable
+Get-ChildItem Env:
 
 ## error env variable is an array. all the errors on that particular session will be shown in the terminal##
 $Error

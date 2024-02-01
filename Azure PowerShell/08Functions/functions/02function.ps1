@@ -4,11 +4,11 @@
 ## This is only valid till for that particualr terminal ##
 ## myfunc -a 4 -b 7  ##
 
-Function myfunc01
+Function sub-func
 {
 param($a,$b)
     $c = $a-$b
     write-host "value is $c"
 }
 
-myfunc01 -a 7 -b 2
+sub-func -a 7 -b 2

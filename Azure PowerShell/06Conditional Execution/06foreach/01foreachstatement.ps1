@@ -1,8 +1,8 @@
 ##this is used for conditional execution##
 
-$myarray=@("chandu","sekhar","azhar")
+$myarray=@("chandu","prsad","azhar","raju","mahesh")
 
 foreach ($item in $myarray)
 {
-    write-host $item
+    write-host "write the name as $item"
 }

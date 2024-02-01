@@ -16,6 +16,7 @@ Function myfunc01
         [ValidateNotNull()]
         [ValidateNotNullOrEmpty()] 
         [ValidateSet(0,5)]
+        [int]
         $Param1,
 
         # Param2 help description
@@ -31,4 +32,4 @@ Function myfunc01
     write-host "sum is $c"
 }
 
-myfunc01 -Param1 4 -Param2 5
+myfunc01 -Param1 5 -Param2 5

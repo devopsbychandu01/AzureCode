@@ -2,28 +2,19 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "staraAccountName": {
+        "storageAccountName": {
             "type": "string",
-            "metadata": "storageAccontName define it here",
-            "maxLength": "17",
-            "minLength": "5",
-            "allowedValues": [
-                "devopsbychandu01",
-                "devopsbychandu02",
-                "devopsbychandu03",
-                "devopsbychandu04",
-                "devopsbychandu05"
-            ]
+            "maxLength": 24,
+            "minLength": 3
         },
         "location": {
             "type": "string",
-            "metadata": "Location define it here"
+            "allowedValues": [
+                "East US",
+                "West US"
+            ]
         },
-        "tags": {
-            "type": "object",
-            "metadata": "tags define it here"
-        },
-        "sqlServerName": {
+        "StorageKind": {
             "type": "string"
         }
     },
@@ -31,19 +22,21 @@
     "variables": {},
     "resources": [
         {
-            "name": "[parameters('staraAccountName')]",
+            "name": "[parameters('storageAccountName')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2023-01-01",
-            "tags": "[parameters('tags')]",
+            "tags": {
+                "displayName": "storageaccount1"
+            },
             "location": "[parameters('location')]",
-            "kind": "StorageV2",
+            "kind": "[parameters('StorageKind')]",
             "sku": {
                 "name": "Standard_LRS",
                 "tier": "Standard"
             }
         },
         {
-            "name": "[parameters('sqlServerName')]",
+            "name": "devopsbychanduServer",
             "type": "Microsoft.Sql/servers",
             "apiVersion": "2021-11-01",
             "location": "[resourceGroup().location]",
@@ -51,7 +44,7 @@
                 "displayName": "sqlServer1"
             },
             "properties": {
-                "administratorLogin": "devops",
+                "administratorLogin": "adminUsername",
                 "administratorLoginPassword": "India@123456"
             },
             "resources": [
@@ -59,13 +52,13 @@
                     "type": "firewallRules",
                     "apiVersion": "2014-04-01",
                     "dependsOn": [
-                        "[resourceId('Microsoft.Sql/servers', parameters('sqlServerName'))]"
+                        "[resourceId('Microsoft.Sql/servers', 'devopsbychanduServer')]"
                     ],
                     "location": "[resourceGroup().location]",
                     "name": "AllowAllWindowsAzureIps",
                     "properties": {
                         "startIpAddress": "0.0.0.0",
-                        "endIpAddress": "255.255.255.255"
+                        "endIpAddress": "0.0.0.0"
                     }
                 }
             ]

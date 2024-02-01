@@ -2,20 +2,14 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "staraAccountName": {
-            "value": "devopsbychandu04"
+        "storageAccountName": {
+            "value": "devopsbychandu03"
         },
         "location": {
-            "value": "eastus"
+            "value": "East US"
         },
-        "tags": {
-            "value": {
-                "owner": "chandu",
-                "project": "cloudcomputing in telugu"
-            }
-        },
-        "sqlServerName":{
-            "value": "devopsbychandusev01"
+        "StorageKind": {
+            "value": "StorageV2"
         }
     }
 }

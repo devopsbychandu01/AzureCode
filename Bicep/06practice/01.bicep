@@ -1,23 +1,18 @@
-
-@minLength(3)
 @maxLength(24)
+@minLength(3)
 param storageAccountName string
+param location string
 
-
-var region = [
-  'eastus'
-  'southindia'
-  'westus'
-]
-
-resource prodstorage 'Microsoft.Storage/storageAccounts@2023-01-01' = {
+resource storageaccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
   name: storageAccountName
-  location: first(region)
+  location: location
+  kind: 'StorageV2'
   sku: {
-    name: 'Standard_LRS'
+    name: 'Premium_LRS'
   }
   properties: {
     accessTier: 'Hot'
   }
-  kind: 'StorageV2'
 }
+
+output storageEndPoint object = storageaccount.properties.primaryEndpoints

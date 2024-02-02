@@ -1,6 +1,6 @@
-param nsgnme string
+param nsgname string
 
-resource nsg 'Microsoft.Network/networkSecurityGroups@2023-05-01' = {
-  name: nsgnme
+resource myresource 'Microsoft.Network/networkSecurityGroups@2023-04-01' = {
+  name: nsgname
   location: 'eastus'
 }

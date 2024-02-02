@@ -1,24 +1,13 @@
-targetScope = 'subscription'
-
-resource rg 'Microsoft.Resources/resourceGroups@2023-07-01' = {
-  name: 'test'
-  location: 'eastus'
-}
-
 module storagemodule '01.bicep' = {
-  name: 'mystorage'
+  name: 'storage'
   params: {
-    storageAccountName: 'devopsbychandu07'
+    storageAccountName: 'cloudcomputintelugu09'
+    location: 'eastus'
   }
-  dependsOn: [
-    rg
-  ]
-  scope: resourceGroup(resourceGroup().rg)
 }
-
 module nsgmodule '02.bicep' = {
   name: 'nsg'
   params: {
-    nsgnme: 'devnsg01'
+    nsgname: 'devnsg'
   }
 }

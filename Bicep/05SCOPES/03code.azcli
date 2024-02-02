@@ -1,3 +1,4 @@
 az deployment sub create \
         --name a7ee7b4a-8947-41aa-b828-6cc170624574 \
-        --template-file 02Main.bicep
+        --template-file 02Main.bicep \
+        --location westus

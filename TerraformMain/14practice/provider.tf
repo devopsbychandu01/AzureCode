@@ -2,12 +2,11 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.82.0"
     }
   }
   backend "azurerm" {
-  resource_group_name  = "dev"
-  storage_account_name = "devopsbychandu01"
+  resource_group_name  = "terraformStateRG"
+  storage_account_name = "devopsbychandustg01"
   container_name       = "demo"
   key                  = "terraform.tfstate"
   }
@@ -15,4 +14,5 @@ terraform {
 
 provider "azurerm" {
   features {}
+  subscription_id = "a7ee7b4a-8947-41aa-b828-6cc170624574"
 }

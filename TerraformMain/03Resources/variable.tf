@@ -1,5 +1,6 @@
 variable "RGName" {
   type = string
+  description = "ResourceGroupName"
 }
 variable "location" {
   type = string

@@ -1,27 +1,23 @@
-resource "azurerm_resource_group" "mygroup" {
-  name = "dev"
-  location = "eastus"
+resource "azurerm_resource_group" "ResourGroup" {
+  name = var.ResourceGroupName
+  location = var.location
+  tags = var.tags
 }
 
-resource "azurerm_resource_group" "testgroup" {
+resource "azurerm_resource_group" "TestGroup" {
   name = "test"
-  location = "eastus2"
-}
-
-resource "azurerm_storage_account" "mystorage" {
- name = "devopsbychandu"
- resource_group_name = "dev"
- location = "eastus"
- account_tier = "Standard"
- account_replication_type = "LRS"
-}
-
-resource "azurerm_resource_group" "testingGroup" {
-  name = "testing"
   location = "eastus"
 }
 
-resource "azurerm_resource_group" "prodGroup" {
-  name = "prod"
+resource "azurerm_resource_group" "myresourceGroup" {
+  name = "uat"
   location = "eastus"
+  tags = {
+    "project" = "cloudComputing"
+  }
+}
+
+module "storageModulee" {
+  source = "github.com/devopsbychandu01/terraformModule.git"
+  RGName = "prod"
 }

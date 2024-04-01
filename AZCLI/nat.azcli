@@ -1,0 +1,11 @@
+az network firewall create \
+    -g dev \
+    -n MyFirewall \
+    -l  eastus \
+    --vnet-name devnetwork \
+    --public-ip firewallip \
+    --tier Standard \
+    --firewall-policy devfirewall
+
+
+az storage account network-rule add -g dev --account-name devstorageaccount90890 --vnet-name devvm-vnet --subnet default

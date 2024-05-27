@@ -15,11 +15,11 @@ provider "azurerm" {
 
 variable "storage_account_names" {
   type    = list(string)
-  default = ["devopsbychandustg01", "devopsbychandustg02", "devopsbychandustg03"]
+  default = ["devopsbychandustg04", "devopsbychandustg02", "devopsbychandustg03"]
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "dev"
+  name     = "devops"
   location = "eastus"
 }
 

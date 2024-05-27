@@ -1,0 +1,12 @@
+{
+    "mode": "Indexed",
+    "PolicyRule": {
+        "if": {
+            "field": "type",
+            "equals": "Microsoft.Storage/storageAccounts"
+        },
+        "then": {
+            "effect": "deny"
+        }
+    }
+}

@@ -1,7 +1,7 @@
 ### install ###
 sudo apt-get install redis-tools
 ### connect to Redis ###
-redis-cli -h devopsbychandu.redis.cache.windows.net -p 6379 -a KvEjFqEb4sxi1XFtCiu4HBjhOpb0rWajMAzCaPwP5bQ=
+redis-cli -h devopsbychandu.redis.cache.windows.net -p 6379 -a <yuhsjkd>
 
 # insert key values
 set "key1" "value1"

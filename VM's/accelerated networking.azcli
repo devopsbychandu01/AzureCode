@@ -1,0 +1,8 @@
+To get the NIC info
+$NIC=Get-AzNetworkInterface -Name testvm776 -ResourceGroupName dev
+Declare the NIC Accelerated property to false.
+$NIC.EnableAcceleratedNetworking=$false
+Set the NIC Accelerated property to false.
+$NIC | Set-AzNetworkInterface
+Start the VM using the following command.
+Start-AzVM -ResourceGroup dev -Name testvm

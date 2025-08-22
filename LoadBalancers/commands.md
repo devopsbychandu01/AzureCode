@@ -1,3 +1,4 @@
+apt update
 apt-get install apache2 -y
 systemctl status apache2
 systemctl start apache2
@@ -9,6 +10,7 @@ vi /var/www/html/index.html
 # esc, :wq!
 
 ## vm2
+apt update
 apt-get install apache2 -y
 systemctl status apache2
 systemctl start apache2

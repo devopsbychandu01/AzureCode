@@ -8,7 +8,11 @@ vi /var/www/html/index.html
 # insert application1
 # esc, :wq!
 
-## vm1
+## vm2
+apt-get install apache2 -y
+systemctl status apache2
+systemctl start apache2
+## vm:2
 vi /var/www/html/index.html
 # 1000dd
 # type i
